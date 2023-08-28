@@ -1,6 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
 
+const hostname = "0.0.0.0";
+const port = 3000;
+
 const app = express();
 
 app.use(express.static("public"));
@@ -30,7 +33,7 @@ app.post("/submit2",function(req,res){
     });
 });
 
-app.listen(3000,function(){
+app.listen(port,hostname,function(){
     console.log("Listining on port 3000");
 });
 var boyArray = ["adi","ajith","chethan","ashwin","Chandan","Aarav",
